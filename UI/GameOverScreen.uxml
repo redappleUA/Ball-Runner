@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI%20Toolkit/menu.uss?fileID=7433441132597879392&amp;guid=be96ae3a80d10054e891c0e445f064c8&amp;type=3#menu" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; -unity-background-image-tint-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.45); align-items: center; justify-content: flex-start;">
+        <ui:Label tabindex="-1" text="GAME OVER" display-tooltip-when-elided="true" name="GameOverLabel" class="menu-title" style="-unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/karma%20future.otf?fileID=12800000&amp;guid=d852fd696d19ab149933621cd57a290b&amp;type=3#karma future&apos;); -unity-font-definition: none; font-size: 100%; color: rgb(253, 253, 253); width: 100%; height: 30%; justify-content: flex-start; align-items: center; -unity-text-align: middle-center;" />
+        <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="Score" enable-rich-text="true" class="score" style="width: 50%; height: 15%; font-size: 50%; -unity-text-align: upper-center; color: rgba(255, 255, 255, 255);" />
+        <ui:VisualElement name="Buttons" style="align-items: center; justify-content: center; height: 30%; width: 15%;">
+            <ui:Button tabindex="-1" text="Restart" display-tooltip-when-elided="true" name="RestartButton" class="menu-smallbutton menu-bigbutton" style="width: 100%; height: 50%; font-size: 35%; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+            <ui:Button tabindex="-1" text="Main Menu" display-tooltip-when-elided="true" name="MenuButton" class="menu-smallbutton" style="width: 100%; height: 35%; font-size: 35%; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/menu.uss?fileID=7433441132597879392&amp;guid=be96ae3a80d10054e891c0e445f064c8&amp;type=3#menu" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(119, 152, 78);">
+        <ui:Label tabindex="-1" text="Ball Runner" display-tooltip-when-elided="true" name="Title" class="menu-title" style="height: 30%; -unity-text-align: middle-center; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/karma%20future.otf?fileID=12800000&amp;guid=d852fd696d19ab149933621cd57a290b&amp;type=3#karma future&apos;); font-size: 130%; -unity-font-style: bold; width: 100%; position: relative; top: auto; left: auto; white-space: nowrap; letter-spacing: 1px; text-shadow: -1px -1px 0 rgb(24, 23, 23); -unity-font-definition: none; justify-content: center; align-items: center; flex-shrink: 0; flex-grow: 0;" />
+        <ui:GroupBox name="Body" style="justify-content: flex-start; flex-grow: 1; flex-shrink: 1; flex-direction: column; flex-wrap: nowrap; align-items: center;">
+            <ui:VisualElement name="Buttons" style="height: 60%; width: 20%; justify-content: flex-end; align-items: center;">
+                <ui:VisualElement name="StartButtonBox" style="width: 100%; height: 40%;">
+                    <ui:Button tabindex="-1" text="Start" display-tooltip-when-elided="true" enable-rich-text="true" name="StartButton" class="menu-startbutton menu-button menu-bigbutton" style="height: 90%; width: auto; font-size: 72%;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ExitButtonBox" style="width: 100%; align-items: center; height: 25%;">
+                    <ui:Button tabindex="-1" text="Exit" display-tooltip-when-elided="true" enable-rich-text="true" name="ExitButton" class="menu-exitbutton menu-button menu-smallbutton" style="width: 100%; height: 100%; font-size: 72%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

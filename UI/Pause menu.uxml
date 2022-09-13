@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI%20Toolkit/menu.uss?fileID=7433441132597879392&amp;guid=be96ae3a80d10054e891c0e445f064c8&amp;type=3#menu" />
+    <ui:GroupBox style="flex-shrink: 1; flex-grow: 1; align-items: center; justify-content: flex-start; background-color: rgba(0, 0, 0, 0.6);">
+        <ui:Label tabindex="-1" text="PAUSED" display-tooltip-when-elided="true" enable-rich-text="false" name="Title" class="menu-title" style="margin-top: 7%; margin-bottom: 71px; flex-shrink: 0; flex-grow: 0; -unity-font-definition: none;" />
+        <ui:Button tabindex="-1" text="Resume" display-tooltip-when-elided="true" name="ResumeButton" class="menu-bigbutton" style="height: 14%; width: 12%; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+        <ui:Button tabindex="-1" text="Restart" display-tooltip-when-elided="true" name="RestartButton" class="menu-smallbutton" style="width: 12%; height: 8%; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+        <ui:Button tabindex="-1" text="Main Menu" display-tooltip-when-elided="true" name="MenuButton" class="menu-smallbutton" style="width: 12%; height: 8%; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);" />
+    </ui:GroupBox>
+</ui:UXML>

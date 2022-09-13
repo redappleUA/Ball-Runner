@@ -1,0 +1,42 @@
+.pause-button {
+    width: 3.5%;
+    height: 7%;
+    -unity-font-definition: none;
+    background-image: url('project://database/Assets/UI/onscreencontrols/Sprites/lineDark/lineDark09.png?fileID=2800000&guid=8141413ee3b94f0458ad39c88dcf8111&type=3#lineDark09');
+}
+
+.pause-button:active {
+    width: 3.5%;
+    height: 7%;
+    -unity-font-definition: none;
+    background-image: url('project://database/Assets/UI/onscreencontrols/Sprites/lineDark/lineDark09.png?fileID=2800000&guid=8141413ee3b94f0458ad39c88dcf8111&type=3#lineDark09');
+    background-color: rgb(51, 47, 47);
+}
+
+.ControlButton {
+    width: 10%;
+    height: 36%;
+    justify-content: space-around;
+    margin-left: 3%;
+    background-image: url('project://database/Assets/UI/onscreencontrols/Sprites/lineDark/lineDark21.png?fileID=2800000&guid=e1fac23628b95624c9c68d1160fce85e&type=3#lineDark21');
+    background-color: rgba(88, 88, 88, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.ControlButton:active {
+    width: 10%;
+    height: 36%;
+    justify-content: space-around;
+    margin-left: 3%;
+    background-image: url('project://database/Assets/UI/onscreencontrols/Sprites/lineDark/lineDark21.png?fileID=2800000&guid=e1fac23628b95624c9c68d1160fce85e&type=3#lineDark21');
+    background-color: rgb(125, 121, 121);
+    -unity-background-scale-mode: scale-to-fit;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
