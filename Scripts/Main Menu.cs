@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class UIController : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     private Button startButton;
     private Button exitButton;
@@ -20,13 +20,6 @@ public class UIController : MonoBehaviour
         exitButton.clicked += ExitButtonPressed;
     }
 
-    void StartButtonPressed()
-    {
-        SceneManager.LoadScene("Game");
-    }
-
-    void ExitButtonPressed()
-    {
-        Application.Quit();
-    }
+    void StartButtonPressed() => SceneManager.LoadScene("Game");
+    void ExitButtonPressed() => Application.Quit();
 }

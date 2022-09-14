@@ -13,8 +13,5 @@ public class CameraWalker : MonoBehaviour
         offset = transform.position - player.transform.position;
     }
 
-    void Update()
-    {
-        transform.position = player.transform.position + offset;
-    }
+    void Update() => transform.position = player.transform.position + offset;
 }

@@ -28,7 +28,7 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
             ""id"": ""39a2839e-84bb-481d-930f-bbde8f8d18b4"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""UpDown"",
                     ""type"": ""Value"",
                     ""id"": ""5dfb966f-2c16-4113-a455-2868861dc03a"",
                     ""expectedControlType"": ""Vector2"",
@@ -45,7 +45,7 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""UpDown"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -56,7 +56,7 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""UpDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -67,29 +67,7 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""8c8da294-e144-42f1-8be2-de72d7ab4169"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""cf1c1897-055a-4c6a-96bc-dd529fcdad67"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""UpDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -100,7 +78,7 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
 }");
         // Move
         m_Move = asset.FindActionMap("Move", throwIfNotFound: true);
-        m_Move_Move = m_Move.FindAction("Move", throwIfNotFound: true);
+        m_Move_UpDown = m_Move.FindAction("UpDown", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,12 +138,12 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
     // Move
     private readonly InputActionMap m_Move;
     private IMoveActions m_MoveActionsCallbackInterface;
-    private readonly InputAction m_Move_Move;
+    private readonly InputAction m_Move_UpDown;
     public struct MoveActions
     {
         private @PlayerContoller m_Wrapper;
         public MoveActions(@PlayerContoller wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Move_Move;
+        public InputAction @UpDown => m_Wrapper.m_Move_UpDown;
         public InputActionMap Get() { return m_Wrapper.m_Move; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -175,22 +153,22 @@ public partial class @PlayerContoller : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_MoveActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnMove;
+                @UpDown.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnUpDown;
+                @UpDown.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnUpDown;
+                @UpDown.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnUpDown;
             }
             m_Wrapper.m_MoveActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Move.started += instance.OnMove;
-                @Move.performed += instance.OnMove;
-                @Move.canceled += instance.OnMove;
+                @UpDown.started += instance.OnUpDown;
+                @UpDown.performed += instance.OnUpDown;
+                @UpDown.canceled += instance.OnUpDown;
             }
         }
     }
     public MoveActions @Move => new MoveActions(this);
     public interface IMoveActions
     {
-        void OnMove(InputAction.CallbackContext context);
+        void OnUpDown(InputAction.CallbackContext context);
     }
 }

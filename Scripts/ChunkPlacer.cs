@@ -5,29 +5,24 @@ using UnityEngine;
 
 public class ChunkPlacer : MonoBehaviour
 {
-    public Transform player; //Гравець
-    public Chunk[] chunksPrefabs;
-    public Chunk FirstChunk;
+    [SerializeField] private Transform player; //Гравець
+    [SerializeField] private Chunk[] chunksPrefabs;
+    [SerializeField] private Chunk FirstChunk;
 
     private List<Chunk> spawnedChunks = new();
 
-    void Start()
-    {
-        spawnedChunks.Add(FirstChunk);
-    }
+    void Start() => spawnedChunks.Add(FirstChunk);
 
     void Update()
     {
         if (player.position.x < spawnedChunks[^1].End.position.x + 80)
-        {
             SpawnChunk();
-        }
     }
 
     private void SpawnChunk()
     {
         Chunk newChunk = Instantiate(GetRandomChunk());
-        //Від позиції End останнього заспавненого чанку віднімаємо локальну позицію початку нового чанку
+        //We subtract the local position of the beginning of the new chunk from the End position of the last filled chunk
         newChunk.transform.position = spawnedChunks[^1].End.position - newChunk.Begin.localPosition;
         spawnedChunks.Add(newChunk);
 

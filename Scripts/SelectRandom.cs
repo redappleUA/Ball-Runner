@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectRandom : MonoBehaviour
 {
-    public int CountToLeave = 1;
+    [SerializeField] private int CountToLeave = 1;
     void Start()
     {
         while(transform.childCount > CountToLeave)
@@ -13,5 +13,4 @@ public class SelectRandom : MonoBehaviour
             DestroyImmediate(childToDestroy.gameObject);
         }
     }
-
 }

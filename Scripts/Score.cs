@@ -10,9 +10,5 @@ public class Score : MonoBehaviour
 
     private void Awake() => player = gameObject.GetComponent<Transform>();
 
-    private void FixedUpdate()
-    {
-        Debug.Log(player.position.x);
-        ScorePoints = -(int)player.position.x;
-    }
+    private void FixedUpdate() => ScorePoints = -(int)player.position.x;
 }

@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
-    public Transform Begin; //Початок чанку (задано на кожному чанку)
-    public Transform End; //Кінець чанку (задано на кожному чанку)
-
-    public Mesh[] Blocks; //Різні варіанти блоків
-
+    public Transform Begin; //Start of chunk (set on each chunk)
+    public Transform End; //End of chunk (set on each chunk)
     public AnimationCurve ChanceFromDistance;
+
+    [SerializeField] private Mesh[] Blocks; //Different options of blocks
 
     private void Start()
     {
-        foreach(var filter in GetComponentsInChildren<MeshFilter>()) //Проходимо всі чайлди чанку
+        foreach(var filter in GetComponentsInChildren<MeshFilter>()) //We go through all the childs of Chunk
         {
             if(filter.sharedMesh == Blocks[0])
-                filter.sharedMesh = Blocks[Random.Range(0, Blocks.Length)]; //Вибираємо рандомно один з варіантів
-           
+                filter.sharedMesh = Blocks[Random.Range(0, Blocks.Length)]; //We choose one of the options at random
         }
     }
 }

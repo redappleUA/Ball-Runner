@@ -20,28 +20,15 @@ public class PlayerControl : MonoBehaviour
         velocity.x = -_velocity;
         rb.velocity = velocity;
 
-
-        var moveDirection = controller.Move.Move.ReadValue<Vector2>();
+        var moveDirection = controller.Move.UpDown.ReadValue<Vector2>();
         rb.AddForce(new Vector3(moveDirection.x, 0, moveDirection.y) * turnSpeed);
     }
 
-    public void UpControlButtonPressed()
-    {
-        rb.AddForce(new Vector3(0, 0, -7) * turnSpeed);
-    }
+    public void UpControlButtonPressed() => rb.AddForce(new Vector3(0, 0, -7) * turnSpeed);
 
-    public void DownControlButtonPressed()
-    {
-        rb.AddForce(new Vector3(0, 0, 7) * turnSpeed);
-    }
+    public void DownControlButtonPressed() => rb.AddForce(new Vector3(0, 0, 7) * turnSpeed);
 
-    private void OnEnable()
-    {
-        controller.Enable();
-    }
+    private void OnEnable() => controller.Enable();
 
-    private void OnDisable()
-    {
-        controller?.Disable();
-    }
+    private void OnDisable() => controller?.Disable();
 }

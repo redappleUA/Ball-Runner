@@ -6,7 +6,7 @@
             "id": "39a2839e-84bb-481d-930f-bbde8f8d18b4",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "UpDown",
                     "type": "Value",
                     "id": "5dfb966f-2c16-4113-a455-2868861dc03a",
                     "expectedControlType": "Vector2",
@@ -23,7 +23,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "UpDown",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -34,7 +34,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "UpDown",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -45,29 +45,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "8c8da294-e144-42f1-8be2-de72d7ab4169",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "cf1c1897-055a-4c6a-96bc-dd529fcdad67",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
+                    "action": "UpDown",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

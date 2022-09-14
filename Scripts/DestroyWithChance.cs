@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyWithChance : MonoBehaviour
 {
     [Range(0f, 1f)]
-    public float ChanceOfStaying = 0.5f;
+    [SerializeField] private float ChanceOfStaying = 0.5f;
 
     private void Start()
     {

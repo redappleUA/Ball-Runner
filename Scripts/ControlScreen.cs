@@ -23,12 +23,6 @@ public class ControlScreen : MonoBehaviour
     }
 
     private void PauseButtonPressed() => FindObjectOfType<PauseScreen>(true).OpenPauseScreen();
-    private void UpControlButtonPressed()
-    {
-        FindObjectOfType<PlayerControl>().UpControlButtonPressed();
-    }
-    private void DownControlButtonPressed()
-    {
-        FindObjectOfType<PlayerControl>().DownControlButtonPressed();
-    }
+    private void UpControlButtonPressed() => FindObjectOfType<PlayerControl>().UpControlButtonPressed();
+    private void DownControlButtonPressed() => FindObjectOfType<PlayerControl>().DownControlButtonPressed();
 }
