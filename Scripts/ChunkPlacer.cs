@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ChunkPlacer : MonoBehaviour
 {
-    [SerializeField] private Transform player; //ֳנאגוצü
+    [SerializeField] private Transform player; // Player
     [SerializeField] private Chunk[] chunksPrefabs;
     [SerializeField] private Chunk FirstChunk;
 
